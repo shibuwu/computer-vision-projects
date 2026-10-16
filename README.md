@@ -24,7 +24,7 @@ variant) was developed in the same project.
   400×400 (160k iterations on WPI's Turing cluster).
   Test metrics over 200 views: **Lego 30.53 dB PSNR / 0.958 SSIM**,
   **Ship 29.16 dB PSNR / 0.872 SSIM**. Extra credit: reconstructed a custom
-  real-world scene from 52 phone images with COLMAP-estimated poses.
+  real-world scene from phone photos with COLMAP-estimated poses.
 
 ### `Group6_p3/` — EinsteinVision: Monocular AV Perception Pipeline
 Tesla-style 3D scene reconstruction from multi-camera driving video:
@@ -41,8 +41,9 @@ WPI's Turing cluster via SLURM. See `Group6_p3/Report.pdf`.
   trajectories, 100 Hz camera / 1000 Hz IMU, 35 textures): pretrained
   ResNet18 vision encoder, 1D-conv inertial encoder over IMU windows with
   Gauss-Markov bias drift, and a late-fusion visual-inertial architecture.
-  Achieved 1.82 m vision-only ATE and 1.89 m inertial ATE on held-out
-  synthetic trajectories. See `Group6_p4/Report.pdf` and
+  The final model (with an auxiliary homography network) reached 1.17 m
+  vision-only ATE and 1.55 m fused ATE (1.95 m inertial-only) on held-out
+  synthetic trajectories (Report.pdf, Table I). See `Group6_p4/Report.pdf` and
   `Group6_p4/Group6_DeepVIO.pdf`.
 
 ### `hw1_autocalib/` — AutoCalib: Zhang's Camera Calibration
